@@ -1,0 +1,50 @@
+2009-11-22  Shiro Kawai <shiro@acm.org>
+
+	* gauche-wrapped.ico: Icon for installer.
+	* setup.nsi.in: Make sure uninstall deletes shortcuts from desktop
+	  and start menu.
+
+2009-11-20  Shiro Kawai <shiro@acm.org>
+
+	* file-list.scm: Updated to work on the recent Gauche.
+	* README: Updated description.
+
+2008-06-16    <yasuyuki@kahua.org>
+
+	* setup.nsi.in: fix .scm open command path bug.
+
+2008-05-07    <yasuyuki@kahua.org>
+
+	* README: use Meadow 3 (ex. Meadow-3.00-r4213-1-pkg.tar.bz2 )
+
+	* setup.nsi.in (!include): add WordFunc.nsh, TextReplace.nsh.
+	(!insertmacro): add WordReplace.
+	(-post): replace "\" to "\\" in gosh.exe's full path.
+	replace gosh.exe's full-path in .emacs.
+
+	* .emacs (cmuscheme-load-hook): add. thanks Saito-san.
+	(scheme-program-name): use "\"gosh.exe\" -i" for replace at install.
+
+2008-05-02    <yasuyuki@kahua.org>
+
+	* use Meadow-3.00-r4213-1-pkg.tar.bz2 now.
+
+	* setup.nsi.in: comment out: CreateShortCut Meadow.lnk on desktop.
+
+2008-05-01  ENDO Yasuyuki  <yasuyuki@kahua.org>
+
+	* .emacs (scheme-program-name): use "../Gauchebox/Gauche/bin/gosh"
+
+	* setup.nsi.in: use "Exec" instead of "!execute".
+
+2008-04-28  ENDO Yasuyuki  <yasuyuki@kahua.org>
+
+	* README: add.
+
+	* file-list.scm: modify from Gauche/winnt/nsis/file-list.scm.
+
+	* .emacs: add.
+
+	* setup.nsi.in: add Meadow's COPYING (GPL)
+
+

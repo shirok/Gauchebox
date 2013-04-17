@@ -1,0 +1,60 @@
+[SK] This is only for historical interest.  Gauche/Windows moved away
+from NSIS and now uses Wix for installer.   The original REAME follows.
+
+
+----
+
+NSIS installer-script generator for Gauchebox
+
+* contains
+
+- COPYING (same as Gauche's COPYING file)
+- gauche-logo.ico (Windows icon)
+- setup.nsi.in (script template for NSIS)
+- file-list.scm (listing Gauche-mingw files and generate a Install-script)
+- .emacs (settings from "Programming Gauche" Appendix B)
+- Makefile (make setup.nsi script-file, build Gauchebox-<version>.exe)
+
+* requirements
+
+- Cygwin development environment
+- Gauche installation under Cygwin
+- MinGW ( http://www.mingw.org/ )
+- NSIS compiler ( http://nsis.sourceforge.net/ )
+-- NSIS TextReplace plugin ( http://nsis.sourceforge.net/TextReplace_plugin )
+- Meadow 3 tarball ( http://www.meadowy.org/meadow/dists/3.00/packages/ )
+- Programming Gauche examples ( http://www.kahua.org/cgi-bin/viewvc.cgi/ProgrammingGauche/trunk/ ) Optional
+
+* directory settings
+
+ Gauche
+ Gauchebox
+ Meadow
+ ProgrammingGauche
+
+these paths must be saved on same directory.
+
+* how to build
+
+** add NSIS path in PATH
+
+ex.
+ export PATH=/cygdrive/c/Program\ Files/NSIS:$PATH
+
+** build Gauche-mingw
+
+ cd ../Gauche
+ ./DIST mingw
+
+** build Gauchebox
+
+ cd ../Gauchebox
+ make
+
+** compile setup.nsi by NSIS
+
+Launche NSIS compiler, open "setup.nsi" file, and compile it.
+Then, "Gauchebox-<version>.exe" will be compiled.
+
+-- 
+<yasuyuki@kahua.org>
